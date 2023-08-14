@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nicoespeon/gitgraph.js"
+    "url": "https://github.com/Thomas-Molen/gitgraph.js"
   },
   "license": "MIT",
   "keywords": [
@@ -26,8 +26,6 @@
     "watch": "lerna run watch --stream",
     "storybook": "sleep 3 && lerna run storybook --stream",
     "develop": "concurrently npm:watch npm:storybook",
-    "website": "lerna run start --scope=@gitgraph/website --stream",
-    "deploy:website": "lerna run deploy --scope=@gitgraph/website --stream",
     "lint": "eslint packages/**/src/**/*.{ts,tsx}",
     "lint:fix": "npm run lint -- --fix",
     "pretest": "npm run build",

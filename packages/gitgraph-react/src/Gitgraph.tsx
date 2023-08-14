@@ -169,7 +169,7 @@ class Gitgraph extends React.Component<GitgraphProps, GitgraphState> {
     const isBezier =
       this.gitgraph.template.branch.mergeStyle === MergeStyle.Bezier;
 
-    return Array.from(this.state.branchesPaths).map(([branch, coordinates]) => (
+    return Array.from(this.state.branchesPaths.reverse()).map(([branch, coordinates]) => (
       <BranchPath
         key={branch.name}
         gitgraph={this.gitgraph}

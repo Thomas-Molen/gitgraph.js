@@ -28,7 +28,9 @@ class BranchesOrder<TNode> {
     compareFunction: CompareBranchesOrder | undefined,
   ) {
     this.colors = colors;
-    commits.forEach((commit) => this.branches.add(commit.branchToDisplay));
+    [...commits].reverse().forEach((commit, i) => {
+      this.branches.add(commit.branchToDisplay);
+    });
 
     if (compareFunction) {
       this.branches = new Set(Array.from(this.branches).sort(compareFunction));
